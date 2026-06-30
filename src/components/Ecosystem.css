@@ -1,0 +1,46 @@
+.ecosystem-section {
+  padding-top: 40px;
+}
+
+.ecosystem-grid {
+  margin-top: 20px;
+}
+
+.eco-item {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.eco-title {
+  color: var(--accent-orange);
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
+
+.eco-desc {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.eco-link {
+  color: var(--accent-orange);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.eco-link:hover {
+  text-decoration: underline;
+  color: var(--accent-orange-hover);
+}
+
+@media (max-width: 768px) {
+  .eco-item {
+    margin-bottom: 40px;
+  }
+}

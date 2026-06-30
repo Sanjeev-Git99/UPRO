@@ -1,0 +1,9 @@
+/* App specific styles if any, mostly using index.css globals */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}

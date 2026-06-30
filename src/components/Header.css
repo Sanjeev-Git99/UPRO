@@ -1,0 +1,125 @@
+.header {
+  padding: 30px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.header.scrolled {
+  padding: 15px 0;
+  background: rgba(11, 10, 16, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 40px; /* Adjust height based on standard navbar sizes */
+  width: auto;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #fff;
+  opacity: 0.8;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-links a.active {
+  opacity: 1;
+  border-bottom-color: var(--accent-orange);
+}
+
+.nav-links a:hover {
+  opacity: 1;
+  color: var(--accent-orange);
+}
+
+.beveled-btn {
+  background: linear-gradient(90deg, #f07b3f, #ea5420);
+  border-radius: 8px; /* Fallback */
+  clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);
+  padding: 12px 30px;
+}
+
+.mobile-menu-btn {
+  display: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .nav-links, .nav-actions {
+    display: none;
+  }
+  .mobile-menu-btn {
+    display: block;
+  }
+}
+
+/* Mobile Dropdown Menu Styles */
+.mobile-nav-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(11, 10, 16, 0.98);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mobile-nav-menu.open {
+  padding: 10px 0 20px;
+  max-height: 500px;
+}
+
+.mobile-nav-menu a {
+  padding: 15px 30px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: color 0.3s ease;
+}
+
+.mobile-nav-menu a:hover {
+  color: var(--accent-orange);
+}
+
+.mobile-nav-menu .mobile-contact-btn {
+  color: var(--accent-orange);
+  border-bottom: none;
+  margin-top: 10px;
+  font-weight: 600;
+}
